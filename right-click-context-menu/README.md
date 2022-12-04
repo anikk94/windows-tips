@@ -6,25 +6,28 @@
 
 - Open Start on Windows 11.
 - Search for regedit and click the top result to open the Registry.
-
 - Navigate to the following path:
 ```
 HKEY_CURRENT_USER\SOFTWARE\CLASSES\CLSID
 ```
 - Right-click the CLSID key, select the New menu, and select the Key option.
-
+[![image1alttext](86ca1aa0-34aa-4e8b-a509-50c905bae2a2-regedit-2022.jpg?raw=true "image1")](#)
 - Name the key {86ca1aa0-34aa-4e8b-a509-50c905bae2a2} and press Enter.
 
 - Right-click the newly created key, select the New menu, and select the Key option.
 
 - Name the key InprocServer32 and press Enter.
+[![image2alttext](InprocServer32-regedit-2022.jpg?raw=true "image2")](#)
 
 - Double-click the newly created key and set its value to blank to enable the classic context menu on Windows 11.
 
 - Click the OK button.
+[![image3alttext](enable-classic-context-menu-windows-11.jpg?raw=true "image3")](#)
 
 - Restart the computer (important).
 
 - If you want to revert the changes to re-enable the modern context menu, you can follow the same instructions outlined above, but on step 4, right-click and delete the {86ca1aa0-34aa-4e8b-a509-50c905bae2a2} key and its contents.
 
 - - Update November 25, 2022: Instructions have been received to ensure they still work.
+
+
