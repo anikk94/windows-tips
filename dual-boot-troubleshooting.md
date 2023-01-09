@@ -100,9 +100,20 @@ boot
 bcdedit
 bootrec
 bootcfg
+bootrec /rebuildbcd
+###
+bcdbood c:/windows
+###
 ```
 
 - please don't run these sort of commands unless you know what you are doing.
 ```
 bcdedit /deletevalue {bootmgr} ...
 ```
+
+### How to create a windows recovery drive
+- windows button
+- search create recovery drive
+- tick `back up system files to the recovery drive`
+- insert flash drive > 16gb
+- next/continue to the end
