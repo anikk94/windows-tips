@@ -79,3 +79,30 @@ C:\WINDOWS\system32>dir p:
 ```
 - EFI will have boot files for all operating systems. Microsoft directory has stuff for windows boot manager. ubuntu directory has stuff for ubuntu.
 - delete the ubuntu directory which contains grub using `rm ...` or `rmdir ...`.
+
+
+
+
+
+### TODO
+- write comments for these useful commands
+```
+from GRUB RESCUE
+insmod part_gpt
+insmod chain
+set root=(hd0,gpt1)
+chainloader \EFI\Microsoft\Boot\bootmgfw.efi
+boot
+```
+
+- look up - recovery admin cmd commands
+```
+bcdedit
+bootrec
+bootcfg
+```
+
+- please don't run these sort of commands unless you know what you are doing.
+```
+bcdedit /deletevalue {bootmgr} ...
+```
