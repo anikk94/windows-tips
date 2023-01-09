@@ -59,9 +59,23 @@ DISKPART> list vol
 * Volume 4     P                FAT32  Partition    260 MB  Healthy    System
   Volume 5                      NTFS   Partition    540 MB  Healthy    Hidden
 ```
-
+- exit diskpart
 ```
 DISKPART> exit
 
 Leaving DiskPart...
 ```
+- directly use the dir command, don't cd into the partition first.
+```
+C:\WINDOWS\system32>dir p:
+ Volume in drive P has no label.
+
+ Directory of P:\
+
+16-10-2020  11:26    <DIR>          EFI
+               0 File(s)              0 bytes
+               1 Dir(s)     177,442,816 bytes free
+
+```
+- EFI will have boot files for all operating systems. Microsoft directory has stuff for windows boot manager. ubuntu directory has stuff for ubuntu.
+- delete the ubuntu directory which contains grub using `rm ...` or `rmdir ...`.
