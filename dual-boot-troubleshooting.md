@@ -7,10 +7,11 @@
 
 #### Checking Boot Partition
 - to see the boot partition from windows open an admin cmd
-
+- run diskpart
 ```
 C:\WINDOWS\system32>diskpart
 ```
+- see disks on system
 ```
 DISKPART> list disk
 
@@ -18,13 +19,13 @@ DISKPART> list disk
   --------  -------------  -------  -------  ---  ---
   Disk 0    Online          465 GB      0 B        *
 ```
-
+- pick the disk with windows. the boot/efi partition should be on the disk.
 ```
 DISKPART> sel disk 0
 
 Disk 0 is now the selected disk.
 ```
-
+- see the partitions on the disk. select the boot partition. the right partition will be a system partition. it won't have a drive letter. the file system of this system partition will be FAT32.
 ```
 DISKPART> list vol
 
@@ -41,7 +42,7 @@ DISKPART> sel vol 4
 
 Volume 4 is the selected volume.
 ```
-
+- 
 ```
 DISKPART> assign letter=p
 
