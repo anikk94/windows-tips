@@ -1,4 +1,4 @@
-### Windows 11 - Ubuntu Dual boot notes:
+## Windows 11 - Ubuntu Dual boot notes:
 
 ### Removing Ubuntu and GRUB
 - delete the ubuntu partition
@@ -11,7 +11,7 @@
 ```
 C:\WINDOWS\system32>diskpart
 ```
-- see disks on system
+- see disks on system. see how gpt and mbr can be identified here. * for gpt, no star for mbr
 ```
 DISKPART> list disk
 
@@ -42,7 +42,7 @@ DISKPART> sel vol 4
 
 Volume 4 is the selected volume.
 ```
-- 
+- give the boot partition a letter so it can be browsed with DIR. repeat list vol to see the result.
 ```
 DISKPART> assign letter=p
 
